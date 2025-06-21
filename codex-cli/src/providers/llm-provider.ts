@@ -28,6 +28,19 @@ export interface LLMProvider {
    * Creates a streaming chat completion.
    * @param request The request payload.
    * @returns An async generator that yields chunks of the response as they arrive.
+   * 
+   * @throws Errors encountered during streaming should be thrown from the generator.
+   *         Consumers should handle errors using try/catch around the for-await-of loop.
+   *         All provider implementations must propagate errors in this standardized way.
+   * 
+   * @example
+   * try {
+   *   for await (const chunk of provider.streamChatCompletion(request)) {
+   *     // handle chunk
+   *   }
+   * } catch (err) {
+   *   // handle error
+   * }
    */
   streamChatCompletion(
     request: ChatCompletionCreateParamsNonStreaming
