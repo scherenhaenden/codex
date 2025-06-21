@@ -611,6 +611,7 @@ dependencies = [
  "anyhow",
  "assert_cmd",
  "async-channel",
+ "async-trait",
  "base64 0.21.7",
  "bytes",
  "codex-apply-patch",
