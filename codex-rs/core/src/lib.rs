@@ -14,6 +14,7 @@ pub mod codex_wrapper;
 pub mod config;
 pub mod config_profile;
 pub mod config_types;
+pub mod llm_provider;
 mod conversation_history;
 pub mod error;
 pub mod exec;
