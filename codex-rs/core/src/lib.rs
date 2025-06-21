@@ -32,6 +32,7 @@ mod openai_tools;
 mod project_doc;
 pub mod protocol;
 mod rollout;
+pub mod llm_provider;
 mod safety;
 mod user_notification;
 pub mod util;
